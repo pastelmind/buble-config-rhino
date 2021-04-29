@@ -1,0 +1,3 @@
+# Ignore all generated JS and .d.ts files
+*.js
+*.d.ts

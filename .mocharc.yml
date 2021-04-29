@@ -1,0 +1,5 @@
+extension: ts
+require: "ts-node/register"
+slow: 2000
+spec: "test/**/*.test.ts"
+timeout: 5000

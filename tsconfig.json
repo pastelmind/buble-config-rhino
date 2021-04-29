@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "forceConsistentCasingInFileNames": true,
+    // Support Node.js 12+
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "strict": true,
+    // Support Node.js 12+
+    "target": "ES2019"
+  },
+  // When running `tsc`, only transpile our code.
+  // Note: For some reason, ts-node does not respect this field when running
+  // in Mocha. It uses this tsconfig to transpile all tests.
+  // Which is fine by me.
+  "files": ["index.ts"]
+}
