@@ -1,5 +1,7 @@
 # buble-config-rhino
 
+[![Test & Lint](https://github.com/pastelmind/buble-config-rhino/actions/workflows/test.yml/badge.svg)](https://github.com/pastelmind/buble-config-rhino/actions/workflows/test.yml) [![npm](https://img.shields.io/npm/v/buble-config-rhino)](https://www.npmjs.com/package/buble-config-rhino)
+
 A [Bublé] configuration that transpiles modern JavaScript for [Rhino], the
 Java-based JavaScript engine made by [Mozilla].
 
