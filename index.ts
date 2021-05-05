@@ -1,29 +1,16 @@
 import type { TransformOptions as BubleOptions } from "buble";
 
-/** Transformation options that are not actually implemented by Bublé. */
-type UnimplementedTransforms = "collections" | "constLoop" | "stickyRegExp";
-
-/** Transform options supported by buble-config-rhino */
-// @types/buble lists some transforms that are no longer available
-export interface Transforms
-  extends Omit<
-    Exclude<BubleOptions["transforms"], undefined>,
-    UnimplementedTransforms
-  > {
-  // @types/buble does not have these yet!
-  exponentiation?: boolean;
-  objectRestSpread?: boolean;
-  trailingFunctionCommas?: boolean;
-}
-
 /** Options supported by buble-config-rhino */
-export interface Options extends Omit<BubleOptions, "target" | "transforms"> {
+export interface Options extends Omit<BubleOptions, "target"> {
   /**
    * `targets` is unsupported since we are specifically targeting Rhino.
    */
   target?: never;
-  transforms?: Transforms;
 }
+
+/** Transform options supported by buble-config-rhino */
+// For now, we support everything
+export type Transforms = Exclude<Options["transforms"], undefined>;
 
 /**
  * Generates an options object for Bublé.
