@@ -26,13 +26,13 @@
     "node": ">=10"
   },
   "dependencies": {
-    "@types/buble": ">=0.19.2 <1"
+    "@types/buble": "^0.20.0"
   },
   "devDependencies": {
     "@types/mocha": "^8.2.2",
-    "@types/node": "^12.20.11",
-    "@typescript-eslint/eslint-plugin": "^4.22.0",
-    "@typescript-eslint/parser": "^4.22.0",
+    "@types/node": "^12.20.12",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
     "buble": "^0.20.0",
     "eslint": "^7.25.0",
     "eslint-config-prettier": "^8.3.0",
