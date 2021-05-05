@@ -127,4 +127,5 @@ dist
 
 # Ignore all generated JS and .d.ts files
 *.js
+*.mjs
 *.d.ts

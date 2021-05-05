@@ -22,6 +22,8 @@ transpiles modern ECMAScript to a subset of ES5+ that Rhino supports:
 ```js
 const buble = require("buble");
 const createPreset = require("buble-config-rhino");
+// Note: buble-config-rhino also provides native ESM exports
+// import { createPreset } from "buble-config-rhino";
 
 const output = buble.transform(code, createPreset());
 ```

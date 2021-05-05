@@ -9,14 +9,22 @@
   ],
   "author": "Ye-hyoung Kang",
   "license": "MIT",
+  "type": "commonjs",
   "main": "index.js",
+  "exports": {
+    "import": "./index.mjs",
+    "require": "./index.js"
+  },
   "types": "index.d.ts",
   "files": [
     "index.js",
+    "index.mjs",
     "index.d.ts"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc",
+    "build:esm": "tsc --module ES2015 --declaration false --outDir dist && shx mv dist/index.js index.mjs && shx rm -r dist",
     "lint": "eslint .",
     "prepublishOnly": "npm run build",
     "style": "prettier --check .",
@@ -38,6 +46,7 @@
     "eslint-config-prettier": "^8.3.0",
     "mocha": "^8.3.2",
     "prettier": "^2.2.1",
+    "shx": "^0.3.3",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4"
   }
