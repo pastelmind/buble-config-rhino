@@ -7,6 +7,11 @@
     "bublé",
     "rhino"
   ],
+  "homepage": "https://github.com/pastelmind/buble-config-rhino",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pastelmind/buble-config-rhino.git"
+  },
   "author": "Ye-hyoung Kang",
   "license": "MIT",
   "type": "commonjs",
