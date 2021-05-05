@@ -16,8 +16,8 @@ supported features to be emitted as-is.
 ## How to use
 
 buble-config-rhino exports a single function. This function returns a
-configuration object that can be passed to `buble.transform()` to produce code
-transpiled
+configuration object that can be passed to `buble.transform()`, which then
+transpiles modern ECMAScript to a subset of ES5+ that Rhino supports:
 
 ```js
 const buble = require("buble");
@@ -42,6 +42,46 @@ const output = buble.transform(
 ```
 
 `createPreset()` accepts the same options object as `buble.transform()`.
+
+### Rollup
+
+Use [@rollup/plugin-buble](https://github.com/rollup/plugins/tree/master/packages/buble)
+with this config:
+
+```js
+// rollup.config.js
+import buble from "@rollup/plugin-buble";
+import createPreset from "buble-config-rhino";
+
+export default {
+  // ...
+  plugins: [buble(createPreset())],
+};
+```
+
+### Webpack
+
+Use [buble-loader](https://github.com/sairion/buble-loader) with this config:
+
+```js
+// webpack.config.js
+const path = require("path");
+const createPreset = require("buble-config-rhino");
+
+module.exports = {
+  // ...
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        loader: "buble-loader",
+        include: path.join(__dirname, "src"),
+        options: createPreset(),
+      },
+    ],
+  },
+};
+```
 
 ## Transpiled language features
 
