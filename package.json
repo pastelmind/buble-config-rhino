@@ -1,6 +1,6 @@
 {
   "name": "buble-config-rhino",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A Bublé configuration that transpiles modern JavaScript for Rhino",
   "keywords": [
     "buble",
