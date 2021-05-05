@@ -1,6 +1,6 @@
 import { expectNeedsTranspilation } from "./util/assertions";
 
-describe("ES2015 features", () => {
+describe("ES2018 features", () => {
   // objectRestSpread
   it("should transpile object rest/spread", async () => {
     await expectNeedsTranspilation(`
